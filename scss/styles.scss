@@ -1,0 +1,20 @@
+@import '00-variables';
+@import '01-mixins';
+@import '02-reset';
+@import '03-commons';
+
+html {
+    font-size: 14px;
+
+    @include ipad {
+        font-size: 16px;
+    }
+}
+
+body {
+    font-family: $averta;
+    background: $body-bg;
+    color: $black;
+}
+
+@import "header";

@@ -1,0 +1,87 @@
+@import url(https://db.onlinewebfonts.com/c/bf9f5d50c1b928ff21436517a1a95ad9?family=Proxima+Nova);
+@import url(https://db.onlinewebfonts.com/c/f036e81e6040acc6b43aabc036862d21?family=Averta);
+/*FONTS*/
+/*--- MIXINS ---*/
+/*Resolution*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.transition, .btn {
+  transition: 0.4s ease all;
+}
+
+.btn {
+  background: #2639ED;
+  color: #F4F4F4;
+  display: inline-block;
+  padding: 1.25rem 2.5rem;
+  border-radius: 3.75rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-weight: 500;
+  letter-spacing: 0.0394rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  border: 1px solid;
+}
+
+.logo {
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 700;
+  font-size: 1.6969rem;
+  line-height: 2.0669rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3.09rem;
+}
+
+html {
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  font-family: "Averta", sans-serif;
+  background: #F4F4F4;
+  color: #000;
+}
+
+.header {
+  padding: 1.9375rem 0;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}/*# sourceMappingURL=styles.css.map */

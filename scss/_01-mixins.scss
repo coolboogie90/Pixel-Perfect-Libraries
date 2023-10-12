@@ -1,0 +1,65 @@
+/*--- MIXINS ---*/
+
+/*Resolution*/
+@mixin ipad() {
+    @media screen and (min-width: $ipad) {
+        @content;
+    }
+}
+
+@mixin ipadPro() {
+    @media screen and (min-width: $ipadPro) {
+        @content;
+    }
+}
+
+@mixin laptop13() {
+    @media screen and (min-width: $laptop13) {
+        @content;
+    }
+}
+
+@mixin laptop() {
+    @media screen and (min-width: $laptop) {
+        @content;
+    }
+}
+
+@mixin pc() {
+    @media screen and (min-width: $pc) {
+        @content;
+    }
+}
+
+@mixin bigPc() {
+    @media screen and (min-width: $bigPc) {
+        @content;
+    }
+}
+
+@mixin fourK() {
+    @media screen and (min-width: $fourK) {
+        @content;
+    }
+}
+
+@mixin container($max-width: $container-size) {
+    display: grid;
+    grid-template-columns:
+        minmax(5vw, 1fr) repeat(12, minmax(11px, $max-width / 12)) minmax(5vw, 1fr);
+}
+
+@mixin flex-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+}
+
+@mixin button($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

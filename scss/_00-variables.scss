@@ -1,0 +1,31 @@
+@import url(https://db.onlinewebfonts.com/c/bf9f5d50c1b928ff21436517a1a95ad9?family=Proxima+Nova);
+@import url(https://db.onlinewebfonts.com/c/f036e81e6040acc6b43aabc036862d21?family=Averta);
+
+$blue: #2639ED;
+$light-blue: #F4F9FF;
+$body-bg: #F4F4F4;
+$black: #000;
+$grey: #A4A4A4;
+$light-yellow: #FFF5DB;
+$pink: #FF007A;
+$orange: #FF9900;
+$green: #00DA71;
+$pale-green: #DEFFEE;
+
+
+/*FONTS*/
+$proxima: "Proxima Nova", sans-serif;
+$averta: "Averta", sans-serif;
+
+
+$container-size: 1440px;
+
+// BREAKPOINTS
+
+$ipad: 768px;
+$ipadPro: 1024px;
+$laptop13: 1280px;
+$laptop: 1440px;
+$pc: 1920px;
+$bigPc: 2560px;
+$fourK: 3440px;
