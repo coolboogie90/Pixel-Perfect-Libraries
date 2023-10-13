@@ -1,0 +1,33 @@
+.header {
+    @include container;
+    align-items: center;
+    padding: 1.9375rem 0;
+
+    &__logo {
+        font-size: 1.6969rem;
+        grid-column: 2/ span 5; // Adjust the column span as needed
+        &--span {
+            font-family: $proxima;
+            font-weight: 700;
+            line-height: 2.0669rem;
+        }
+    }
+
+    &__navigation {
+        grid-column: 7 / -2; // Spread from the 7th column to the last column
+    
+        &-list {
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        &-item {
+            
+            // Styles for each navigation item
+        }
+    
+        &-link {
+            // Styles for each navigation link
+        }
+    }
+}

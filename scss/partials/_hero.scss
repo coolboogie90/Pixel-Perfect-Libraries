@@ -1,0 +1,17 @@
+.hero {
+    @include container;
+    align-items: center;
+    gap: 4.0625rem;
+
+    &__text {
+        grid-column: 2/ span 5; // Adjust the column span as needed
+    }
+
+    &__cover {
+        grid-column: 7 / -1; // Spread from the 7th column to the last column
+    
+        img{
+            border-bottom-left-radius: 12.5rem;
+        }
+    }
+}

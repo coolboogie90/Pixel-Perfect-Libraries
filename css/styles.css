@@ -2,7 +2,6 @@
 @import url(https://db.onlinewebfonts.com/c/f036e81e6040acc6b43aabc036862d21?family=Averta);
 /*FONTS*/
 /*--- MIXINS ---*/
-/*Resolution*/
 *,
 *::before,
 *::after {
@@ -12,6 +11,7 @@
   line-height: 1;
   font-size: inherit;
   font-weight: inherit;
+  transition: 300ms;
 }
 
 html {
@@ -31,22 +31,48 @@ a {
   color: inherit;
 }
 
-.transition, .btn {
-  transition: 0.4s ease all;
-}
-
 .btn {
-  background: #2639ED;
-  color: #F4F4F4;
   display: inline-block;
   padding: 1.25rem 2.5rem;
+  border: none;
   border-radius: 3.75rem;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  font-weight: 500;
-  letter-spacing: 0.0394rem;
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  border: 1px solid;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0.065em;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2639ED;
+  z-index: -2;
+}
+.btn:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #0f1fb7;
+  transition: all 0.3s;
+  border-radius: 3.75rem;
+  z-index: -1;
+}
+.btn:hover {
+  color: #fff;
+}
+.btn:hover:before {
+  width: 100%;
 }
 
 .logo {
@@ -58,16 +84,23 @@ a {
 
 .section-title {
   font-size: 2.5rem;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 3.09rem;
+  margin-bottom: 3.125rem;
+}
+
+.section-text {
+  font-weight: 400;
+  color: #757575;
+  margin-bottom: 2.1875rem;
 }
 
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 @media screen and (min-width: 768px) {
   html {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -78,10 +111,39 @@ body {
 }
 
 .header {
+  display: grid;
+  grid-template-columns: minmax(5vw, 1fr) repeat(12, minmax(11px, 120px)) minmax(5vw, 1fr);
+  align-items: center;
   padding: 1.9375rem 0;
 }
-.header .container {
+.header__logo {
+  font-size: 1.6969rem;
+  grid-column: 2/span 5;
+}
+.header__logo--span {
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 700;
+  line-height: 2.0669rem;
+}
+.header__navigation {
+  grid-column: 7/-2;
+}
+.header__navigation-list {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-}/*# sourceMappingURL=styles.css.map */
+}
+.hero {
+  display: grid;
+  grid-template-columns: minmax(5vw, 1fr) repeat(12, minmax(11px, 120px)) minmax(5vw, 1fr);
+  align-items: center;
+  gap: 4.0625rem;
+}
+.hero__text {
+  grid-column: 2/span 5;
+}
+.hero__cover {
+  grid-column: 7/-1;
+}
+.hero__cover img {
+  border-bottom-left-radius: 12.5rem;
+}

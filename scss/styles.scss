@@ -1,13 +1,13 @@
-@import '00-variables';
-@import '01-mixins';
-@import '02-reset';
-@import '03-commons';
+@import 'partials/00-variables';
+@import 'partials/01-mixins';
+@import 'partials/02-reset';
+@import 'partials/03-commons';
 
 html {
-    font-size: 14px;
+    font-size: 16px;
 
     @include ipad {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
@@ -17,4 +17,5 @@ body {
     color: $black;
 }
 
-@import "header";
+@import "partials/header";
+@import "partials/hero";

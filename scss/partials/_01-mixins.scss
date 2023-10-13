@@ -1,6 +1,29 @@
 /*--- MIXINS ---*/
+//===Debug Mode===
+$debug: true !default;
 
-/*Resolution*/
+@mixin debugmode {
+    @if ($debug) {
+        @debug "Debug mode enabled";
+        border: 2px solid red;
+    }
+
+    @else {
+        border: none;
+    }
+}
+
+//===Font Settings===
+@mixin font($family, $size, $weight, $line, $spacing, $color) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line;
+    letter-spacing: $spacing;
+    color: $color;
+}
+
+//===Resolution===
 @mixin ipad() {
     @media screen and (min-width: $ipad) {
         @content;
@@ -46,7 +69,7 @@
 @mixin container($max-width: $container-size) {
     display: grid;
     grid-template-columns:
-        minmax(5vw, 1fr) repeat(12, minmax(11px, $max-width / 12)) minmax(5vw, 1fr);
+        minmax(5vw, 1fr) repeat(12, minmax(11px, calc($max-width / 12))) minmax(5vw, 1fr);
 }
 
 @mixin flex-wrapper {
