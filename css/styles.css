@@ -1,5 +1,5 @@
-@import url(https://db.onlinewebfonts.com/c/bf9f5d50c1b928ff21436517a1a95ad9?family=Proxima+Nova);
-@import url(https://db.onlinewebfonts.com/c/f036e81e6040acc6b43aabc036862d21?family=Averta);
+@import url(https://db.onlinewebfonts.com/c/72b6f2c9990bd3d37b8013a59ed78902?family=Proxima+Nova+Bold);
+@import url(https://db.onlinewebfonts.com/c/3114dbb517b7c67b80e322545c5f565f?family=Averta+Demo+PE+Regular);
 /*FONTS*/
 /*--- MIXINS ---*/
 *,
@@ -11,7 +11,7 @@
   line-height: 1;
   font-size: inherit;
   font-weight: inherit;
-  transition: 300ms;
+  /*transition: 300ms;*/
 }
 
 html {
@@ -37,8 +37,12 @@ a {
   border: none;
   border-radius: 3.75rem;
   color: #fff;
+}
+
+.btn {
+  font-family: "Averta Demo PE Regular", sans-serif;
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 25px;
   letter-spacing: 0.065em;
   transition: all 0.3s;
@@ -69,6 +73,7 @@ a {
   z-index: -1;
 }
 .btn:hover {
+  cursor: pointer;
   color: #fff;
 }
 .btn:hover:before {
@@ -76,8 +81,7 @@ a {
 }
 
 .logo {
-  font-family: "Proxima Nova", sans-serif;
-  font-weight: 700;
+  font-family: "Proxima Nova Bold", sans-serif;
   font-size: 1.6969rem;
   line-height: 2.0669rem;
 }
@@ -105,7 +109,7 @@ html {
 }
 
 body {
-  font-family: "Averta", sans-serif;
+  font-family: "Averta Demo PE Regular", sans-serif;
   background: #F4F4F4;
   color: #000;
 }
@@ -121,7 +125,7 @@ body {
   grid-column: 2/span 5;
 }
 .header__logo--span {
-  font-family: "Proxima Nova", sans-serif;
+  font-family: "Proxima Nova Bold", sans-serif;
   font-weight: 700;
   line-height: 2.0669rem;
 }
@@ -136,13 +140,13 @@ body {
   display: grid;
   grid-template-columns: minmax(5vw, 1fr) repeat(12, minmax(11px, 120px)) minmax(5vw, 1fr);
   align-items: center;
-  gap: 4.0625rem;
 }
 .hero__text {
-  grid-column: 2/span 5;
+  grid-column: 2/7;
+  max-width: 540px;
 }
 .hero__cover {
-  grid-column: 7/-1;
+  grid-column: 8/-1;
 }
 .hero__cover img {
   border-bottom-left-radius: 12.5rem;
