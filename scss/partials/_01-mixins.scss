@@ -67,6 +67,8 @@ $debug: true !default;
 }
 
 @mixin container($max-width: $container-size) {
+    padding: 10px 0;
+    margin-top: 200px 0;
     display: grid;
     grid-template-columns:
         minmax(5vw, 1fr) repeat(12, minmax(11px, calc($max-width / 12))) minmax(5vw, 1fr);

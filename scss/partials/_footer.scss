@@ -1,0 +1,18 @@
+.footer{
+    @include container;
+    align-items: center;
+    position: relative;
+
+    // &__line{
+    //     position: absolute;
+    //     top: 20%;
+    //     display: block;
+    //     border-top: 1px solid #E4E4E4;
+    // }
+
+    &__about{
+        grid-column: 2/ 4;
+    }
+
+
+}

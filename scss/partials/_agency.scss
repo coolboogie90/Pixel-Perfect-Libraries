@@ -1,0 +1,41 @@
+.agency {
+    @include container;
+    align-items: center;
+    padding-top: 200px;
+
+    &__video {
+        grid-column: 2/6;
+        position: relative;
+        &::after {
+            @extend .pseudo;
+            content: url(/img/Ellipse\ 86.svg);
+            bottom: -15%;
+            right: -30%;
+            z-index: -1;
+        }
+
+        iframe {
+            width: 550px;
+            height: 372px;
+            border-radius: 32px;
+            box-shadow: 10px 20px 50px 0px #00000026;
+        }
+    }
+
+    &__text {
+        grid-column: 8/14;
+        position: relative;
+
+        h2{
+            margin-bottom: 2.5rem;
+        }
+
+        &::before {
+            @extend .pseudo;
+            content: url(/img/Rectangle\ 26.svg);
+            top: -5%;
+            left: -5%;
+            z-index: -1;
+        }   
+    }
+}

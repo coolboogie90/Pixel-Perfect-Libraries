@@ -1,0 +1,11 @@
+.reviews{
+    @include container;
+    align-items: center;
+    text-align: center;
+    padding-top: 200px;
+
+    &__text{
+        grid-column: span 14;
+    }
+
+}

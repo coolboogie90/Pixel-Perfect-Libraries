@@ -1,0 +1,59 @@
+.clients {
+    @include container;
+    align-items: center;
+    margin: 100px 0;
+
+    &__text {
+        position: relative;
+        grid-column: 2/ 5;
+
+        h1 {
+            @extend .section-title;
+            margin-bottom: 0.5em;
+        }
+    }
+
+    &__swiper {
+        grid-column: 7/ 14;
+    }
+    
+}
+
+.swiper {
+    width: 800px;
+    height: 300px;
+}
+
+.swiper-slide {
+    &.google {
+        content: url("/img/Google\ Logo.svg");
+    }
+
+    &.airbnb {
+        content: url("/img/Airbnb\ Logo.svg");
+    }
+
+    &.ubereats {
+        content: url("/img/UberEats\ Logo.svg");
+    }
+
+    &.amazon {
+        content: url("/img/Amazon\ Logo.svg");
+    }
+    &.ff6 {
+        content: url("/img/final-fantasy-vi.svg");
+    }
+    &.ff7 {
+        content: url("/img/final-fantasy-vii.svg");
+    }
+    &.nintendo {
+        content: url("/img/nintendo-2.svg");
+    }
+    &.overwatch {
+        content: url("/img/overwatch.svg");
+    }
+
+    &.square-enix {
+        content: url("/img/square-enix-1.svg");
+    }
+}
